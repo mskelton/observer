@@ -5,10 +5,21 @@ on:
 permissions:
   contents: write
 jobs:
-  release:
+  lint:
     runs-on: ubuntu-latest
     steps:
       - uses: mskelton/setup-pnpm@v1
+      - name: ESLint
+        run: pnpm lint
+      - name: Prettier
+        run: pnpm prettier --check .
+  release:
+    needs: lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: mskelton/setup-pnpm@v1
+      - name: Build
+        run: pnpm ts
       - name: Release
         run: pnpm semantic-release
         env:
