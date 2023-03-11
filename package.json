@@ -2,6 +2,9 @@
   "name": "@mskelton/observer",
   "description": "A super simple and performant way to observer specific selectors in the DOM.",
   "version": "0.0.0-semantically-released",
+  "publishConfig": {
+    "access": "public"
+  },
   "author": "Mark Skelton",
   "packageManager": "pnpm@7.29.1",
   "repository": "github:mskelton/observer",
