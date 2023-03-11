@@ -1,19 +1,21 @@
 {
-  "name": "npm-template",
-  "description": "",
+  "name": "@mskelton/observer",
+  "description": "A super simple and performant way to observer specific selectors in the DOM.",
   "version": "0.0.0-semantically-released",
   "author": "Mark Skelton",
-  "packageManager": "yarn@3.3.1",
-  "repository": "github:mskelton/npm-template",
+  "packageManager": "pnpm@7.29.1",
+  "repository": "github:mskelton/observer",
   "bugs": {
-    "url": "https://github.com/mskelton/npm-template/issues"
+    "url": "https://github.com/mskelton/observer/issues"
   },
-  "homepage": "https://github.com/mskelton/npm-template#readme",
+  "homepage": "https://github.com/mskelton/observer#readme",
   "license": "ISC",
-  "keywords": [],
+  "keywords": [
+    "observer"
+  ],
   "type": "module",
   "files": [
-    "lib"
+    "dist"
   ],
   "scripts": {
     "lint": "eslint .",
@@ -21,15 +23,15 @@
     "ts": "tsc"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.12",
+    "@babel/core": "^7.21.0",
     "@babel/eslint-parser": "^7.19.1",
-    "@mskelton/eslint-config": "^7.1.0",
+    "@mskelton/eslint-config": "^7.2.0",
     "@mskelton/tsconfig": "^2.0.0",
-    "@typescript-eslint/eslint-plugin": "^5.49.0",
-    "@typescript-eslint/parser": "^5.49.0",
-    "eslint": "^8.32.0",
+    "@typescript-eslint/eslint-plugin": "^5.54.1",
+    "@typescript-eslint/parser": "^5.54.1",
+    "eslint": "^8.36.0",
     "eslint-plugin-sort": "^2.4.0",
-    "prettier": "^2.8.3",
-    "typescript": "^4.9.4"
+    "prettier": "^2.8.4",
+    "typescript": "^4.9.5"
   }
 }

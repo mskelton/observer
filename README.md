@@ -1,21 +1,33 @@
-# npm-template
+# @mskelton/observer
 
-[![Build status](https://github.com/mskelton/npm-template/workflows/Build/badge.svg)](https://github.com/mskelton/npm-template/actions)
+[![Build status](https://github.com/mskelton/observer/workflows/Build/badge.svg)](https://github.com/mskelton/observer/actions)
 
 ## Installation
 
 ### npm
 
-```sh
-npm install npm-template
+```bash
+npm install @mskelton/observer
 ```
 
 ### Yarn
 
-```sh
-yarn add npm-template
+```bash
+yarn add @mskelton/observer
+```
+
+### pnpm
+
+```bash
+pnpm add @mskelton/observer
 ```
 
 ## Usage
 
-// TODO
+```javascript
+import { observer } from "@mskelton/observer"
+
+observe(".my-selector", (el) => {
+  // ...
+})
+```
