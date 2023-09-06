@@ -26,6 +26,8 @@ jobs:
       - uses: mskelton/setup-pnpm@v1
       - name: Build
         run: pnpm build
+      - name: Build types
+        run: pnpm ts
       - name: Release
         run: pnpm semantic-release
         env:
