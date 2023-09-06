@@ -25,7 +25,7 @@ pnpm add @mskelton/observer
 ## Usage
 
 ```javascript
-import { observer } from "@mskelton/observer"
+import { observe } from "@mskelton/observer"
 
 observe(".my-selector", (el) => {
   // ...
