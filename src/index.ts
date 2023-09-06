@@ -1,5 +1,13 @@
 const animation = "mskelton-selector-observer"
 
+function slugify(str: string) {
+  return str
+    .replace(/[^a-z0-9]+/gi, "-")
+    .replace(/-+/g, "-")
+    .replace(/^-|-$/g, "")
+    .toLowerCase()
+}
+
 function registerAnimation() {
   const style = document.createElement("style")
   style.innerHTML = `@keyframes ${animation} {}`
@@ -25,7 +33,7 @@ export function observe(
 ) {
   registerAnimation()
 
-  const seenMark = `mskelton-seen-${selector}`
+  const seenMark = `mskelton-seen-${slugify(selector)}`
   const rule = document.createElement("style")
 
   rule.textContent = `
