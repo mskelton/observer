@@ -13,13 +13,19 @@ jobs:
         run: pnpm lint
       - name: Prettier
         run: pnpm prettier --check .
+  typecheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: mskelton/setup-pnpm@v1
+      - name: Type check
+        run: pnpm ts
   release:
-    needs: lint
+    needs: [lint, typecheck]
     runs-on: ubuntu-latest
     steps:
       - uses: mskelton/setup-pnpm@v1
       - name: Build
-        run: pnpm ts
+        run: pnpm build
       - name: Release
         run: pnpm semantic-release
         env:
