@@ -21,7 +21,7 @@ const getListener =
 
 export function observe(
   selector: string,
-  listener: (node: HTMLElement) => void
+  listener: (node: HTMLElement) => void,
 ) {
   registerAnimation()
 
@@ -37,6 +37,6 @@ export function observe(
   document.body.prepend(rule)
   window.addEventListener(
     "animationstart",
-    getListener(seenMark, selector, listener)
+    getListener(seenMark, selector, listener),
   )
 }
